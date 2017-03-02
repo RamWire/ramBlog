@@ -10,7 +10,7 @@
     
     <title>
         
-            博客迁移第一篇 | 
+            分段选择控制视图(简单易用低耦合) | 
         
         RamWire
     </title>
@@ -48,7 +48,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://ramwire.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="博客迁移第一篇 | RamWire">
+    <meta property="og:title" content="分段选择控制视图(简单易用低耦合) | RamWire">
     <meta property="og:description" content="Hello world">
     
 
@@ -234,7 +234,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.</span> <span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#效果预览"><span class="post-toc-number">2.</span> <span class="post-toc-text">效果预览</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何使用"><span class="post-toc-number">3.</span> <span class="post-toc-text">如何使用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原理讲解"><span class="post-toc-number">4.</span> <span class="post-toc-text">原理讲解</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现代码"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">实现代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#框架实现代码讲解"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">框架实现代码讲解</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最后"><span class="post-toc-number">5.</span> <span class="post-toc-text">最后</span></a></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -259,10 +259,10 @@
     <!-- Paradox Post Header -->
     
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://p1.bqimg.com/567571/366c711472a489a9.png)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(http://p1.bqimg.com/567571/f8725bd3e8d4392a.png)">
     
             <p class="article-headline-p">
-                博客迁移第一篇
+                分段选择控制视图(简单易用低耦合)
             </p>
         </div>
 
@@ -281,7 +281,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>RamWire</strong>
-        <span>3月 01, 2017</span>
+        <span>3月 02, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -321,7 +321,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=博客迁移第一篇&url=https://ramwire.github.io//2017/03/01/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=分段选择控制视图(简单易用低耦合)&url=https://ramwire.github.io//2017/03/02/分段选择控制视图(简单易用低耦合)/index.html&pic=&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -330,7 +330,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=博客迁移第一篇&url=https://ramwire.github.io//2017/03/01/hello-world/index.html&via=RamWire" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=分段选择控制视图(简单易用低耦合)&url=https://ramwire.github.io//2017/03/02/分段选择控制视图(简单易用低耦合)/index.html&via=RamWire" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -339,7 +339,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://ramwire.github.io//2017/03/01/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://ramwire.github.io//2017/03/02/分段选择控制视图(简单易用低耦合)/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -348,7 +348,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://ramwire.github.io//2017/03/01/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://ramwire.github.io//2017/03/02/分段选择控制视图(简单易用低耦合)/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -372,7 +372,29 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>开始吧，见证你的成长！</p>
+        <p><strong>在我们实际开发的过程中，类似于网易新闻今日头条的顶部分段选择是很常见的一种需求。因为自己在工作中经常用到，所以在封装的同时我还在考虑如何让这个框架更加便捷更加易用并且跟相关控制器或者视图减小耦合性，所以此框架是我认为比较低耦合且容易使用的一种分段控制方案，不需要包上您所需要的控制器的.h文件，只需要它们的名称即可实现！先放上我的框架地址</strong>：<br><a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView-Github</a></p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>您只需创建自己的ViewController即可，后续的操作都在自己的ViewController中。</li>
+<li>可分步加载您所添加的ViewController，实现类似网易新闻，虎扑看球的效果。</li>
+<li>只需一行代码创建即可实现所有功能。</li>
+<li>菜单栏中选中未选中的颜色可自己定制。</li>
+<li>不仅仅是UIViewController，您可以根据您的需求创建UIView添加到NinaPagerView中。</li>
+<li>可根据您的需求对上方的滑块进行选择，无论是背景颜色还是文字颜色</li>
+</ul>
+<h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p><a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView</a>为您提供了三种滑动样式，先后顺序分别为NinaPagerStyleBottomLine、NinaPagerStyleSlideBlock和NinaPagerStyleStateNormal：<br><img src="http://upload-images.jianshu.io/upload_images/651593-91c769976ac0b0ff.gif?imageMogr2/auto-orient/strip" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/651593-c8c8b1de4aff4867.gif?imageMogr2/auto-orient/strip" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/651593-133655e1237bd8f8.gif?imageMogr2/auto-orient/strip" alt=""></p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p><a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView</a>使用起来很方便，只需要：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">NinaPagerView *ninaPagerView = [[NinaPagerView alloc] initWithNinaPagerStyle:NinaPagerStyleSlideBlock WithTitles:titleArray WithVCs:vcsArray WithColorArrays:colorArray];</div><div class="line">[self.view addSubview:ninaPagerView];</div></pre></td></tr></table></figure></p>
+<p>即可！(具体的使用细节方面可以去<a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView</a>中查看)</p>
+<h2 id="原理讲解"><a href="#原理讲解" class="headerlink" title="原理讲解"></a>原理讲解</h2><p>其实在众多的分段控制框架中，在滑动监听让标题移动这些方面都大同小异，所以这方面的讲解我就不多赘述了，我着重写一下我是如何实现只传入控制器或者视图的名称就可以对其进行创建的。</p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><p>当您想按照上述形式创建控制器数组时，假设您在项目中创建了FirstViewController到NinthViewController九个控制器，在NinaPagerView中您可以这样传入控制器数组(其实是文本数组)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">NSArray *vcsArray = @[</div><div class="line">@&quot;FirstViewController&quot;,</div><div class="line">@&quot;SecondViewController&quot;,</div><div class="line">@&quot;ThirdViewController&quot;,</div><div class="line">@&quot;ForthViewController&quot;,</div><div class="line">@&quot;FifthViewController&quot;,</div><div class="line">@&quot;SixthViewController&quot;,</div><div class="line">@&quot;SeventhViewController&quot;,</div><div class="line">@&quot;EighthViewController&quot;,</div><div class="line">@&quot;NinthViewController&quot;,</div><div class="line">];</div></pre></td></tr></table></figure></p>
+<p>不需要import它们的头文件，只需要把它们的名称传入即可！</p>
+<h3 id="框架实现代码讲解"><a href="#框架实现代码讲解" class="headerlink" title="框架实现代码讲解"></a>框架实现代码讲解</h3><p>在<a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView</a>中，对于传入进来的数组，虽然我们称它为控制器数组，但是实际上传进来的是数组成员是NSString类型，我们只需要知道它的名称即可找到相应的控制器或者视图。具体识别代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">NSString *className = classArray[i];</div><div class="line">Class class = NSClassFromString(className);</div><div class="line">if ([class isSubclassOfClass:[UIViewController class]] &#123;</div><div class="line">ctrl = class.new;</div><div class="line">&#125;else if ([class isSubclassOfClass:[UIView class]]) &#123;</div><div class="line">UIView *singleView =class.new;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过Class类对传入的数据进行类型的判别，判断它的父类是UIViewController还是UIView，这样判别出结果后再对其进行创建，以此来来实现对传入文本的解析和变量的创建。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><ul>
+<li><a href="https://github.com/RamWire/NinaPagerView" target="_blank" rel="external">NinaPagerView</a>框架支持Cocoapods和Carthage的使用，您如果觉得还不错，麻烦给个star支持一下~</li>
+<li>如果您在使用的过程中出现了问题，请在框架中issue我，非常感谢！</li>
+</ul>
 
     
 
@@ -396,19 +418,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/02/分段选择控制视图(简单易用低耦合)/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/03/01/hello-world/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
